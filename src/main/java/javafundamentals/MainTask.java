@@ -9,7 +9,7 @@ public class MainTask {
                 System.out.print(Integer.parseInt(iterator));
             }
         } catch (NumberFormatException nfe) {
-            System.out.println("\n" + nfe);
+            System.out.println("\nArgument must be integer! " + nfe.getLocalizedMessage());
         }
     }
 }
