@@ -14,5 +14,19 @@ public class MainTask {
         for (int i = args.length - 1; i >= 0; i--) {
             System.out.println(args[i]);
         }
+      
+        try {
+              for (String iterator : args) {
+                  System.out.print(Integer.parseInt(iterator) + " ");
+              }
+
+              System.out.print("\n");
+
+              for (String iterator : args) {
+                  System.out.println(Integer.parseInt(iterator));
+              }
+        } catch (NumberFormatException nfe) {
+              System.out.println("Argument must be integer! " + nfe.getLocalizedMessage());
+        }
     }
 }
